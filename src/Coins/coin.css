@@ -1,0 +1,14 @@
+.coin {
+  display: flex;
+  align-items: center;
+  box-shadow: 0 3px 5px gray;
+  padding: 1rem;
+  width: 15rem;
+  gap: 0.5rem;
+  border-radius: 1rem;
+}
+
+.information {
+  display: flex;
+  flex-direction: column;
+}

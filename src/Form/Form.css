@@ -1,0 +1,51 @@
+.wrapper {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.616);
+  font-size: larger;
+}
+
+.Form {
+  z-index: 10;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 1.25rem;
+}
+
+.Form-Header {
+  display: flex;
+  background: black;
+  color: white;
+  justify-content: space-between;
+}
+
+.Form-Close {
+  cursor: pointer;
+  padding: 0 0.5rem;
+  background: red;
+  border: 1px solid black;
+  color: white;
+}
+
+.Input {
+  display: flex;
+}
+.Input-Radio {
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+}
+.Form-Button {
+  background: grey;
+  color: white;
+  border-radius: 0.5em;
+  box-shadow: 1px 1px 3px 2px grey;
+  padding: 1rem 2rem;
+}
