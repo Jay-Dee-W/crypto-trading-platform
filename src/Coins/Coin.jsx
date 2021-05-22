@@ -3,14 +3,14 @@ import { useContext } from "react";
 //css
 import "./coin.css";
 //context
-import CoinContext from "../_contexts/CoinContext";
+import StateContext from '../_contexts/StateContext'
 
 const Coin = (props) => {
-  const { data } = props;
 
-  const { name, market_data, image } = data;
+  const { name, market_data, image } = props.data;
 
-  const { setCurrentCoin, coins, setShowForm } = useContext(CoinContext);
+  const { setCurrentCoin, coins, setShowForm  } = useContext(StateContext);
+  
 
   return (
     <button className="coin" onClick={toggleForm}>
@@ -36,6 +36,7 @@ const Coin = (props) => {
 
   function toggleForm() {
     let coinName = coins.find((coin) => coin.name === name);
+    console.log(coinName)
     setCurrentCoin(coinName);
     setShowForm(true)
   }

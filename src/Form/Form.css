@@ -13,6 +13,9 @@
   background-color: white;
   display: flex;
   flex-direction: column;
+  border-radius: .5em;
+  overflow: hidden;
+  width: 30%
 }
 
 label {
@@ -24,28 +27,55 @@ label {
   background: black;
   color: white;
   justify-content: space-between;
+  padding: 2%;
 }
 
 .Form-Close {
   cursor: pointer;
-  padding: 0 0.5rem;
+  width: 30px;
+  height: 20px;
+  text-align: center;
   background: red;
   border: 1px solid black;
   color: white;
+  border-radius: 5em;
+}
+
+.Form-content {
+  padding: 2%;
 }
 
 .Input {
   display: flex;
+  justify-content: space-evenly;
+  font-size: smaller;
+}
+.Input > input {
+  border-radius: .5em;
+  width: 50%;
+  flex: 2;
+
+}
+.Input > p {
+  width: 50%;
+  flex: 3;
 }
 .Input-Radio {
   display: flex;
   flex-direction: column;
   width: 100px;
+  margin: 1% 0%;
 }
 .Form-Button {
   background: grey;
   color: white;
   border-radius: 0.5em;
   box-shadow: 1px 1px 3px 2px grey;
-  padding: 1rem 2rem;
+  padding: .2rem .5rem;
+  margin: 2% 0%;
+}
+
+.Form-Button:disabled {
+  background: rgb(218, 216, 216);
+  cursor: default;
 }

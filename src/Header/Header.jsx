@@ -1,18 +1,21 @@
 import React from "react";
-import { useState } from "react";
+import { useContext } from "react";
 import "./Header.css";
 
+//context
+import StateContext from "../_contexts/StateContext";
+
 const Header = () => {
-  // eslint-disable-next-line
-  const [wallet, setWallet] = useState(100);
-  // eslint-disable-next-line
-  const [porfolio, setPorfolio] = useState(0);
+  const { wallet, portfolio } = useContext(StateContext);
+
+
+ 
   return (
     <div className="Header">
       <h1> Earn some virtual money</h1>
       <p>To buy virtual food</p>
       <h3> Wallet: {wallet}</h3>
-      <h2> Porfolio Value: {porfolio}</h2>
+      <h2> Portfolio Value: { portfolio }</h2>
     </div>
   );
 };

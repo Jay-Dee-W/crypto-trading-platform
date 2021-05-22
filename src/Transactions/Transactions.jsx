@@ -1,33 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
+import StateContext from "../_contexts/StateContext";
 //components
 import CardTransaction from "./CardTransaction";
 
-const data = [
-  {
-    coinName: "Dogecoin",
-    amount: 50,
-    total_paid: 25,
-    current_value: 24,
-    pl: 0.09,
-    isBuy: true,
-  },
-  {
-    coinName: "Dogecoin",
-    amount: 50,
-    total_paid: 25,
-    current_value: 24,
-    pl: 0.09,
-    isBuy: false,
-  },
-];
-
 const Transactions = () => {
+  const { transactions } = useContext(StateContext);
   return (
     <div className="stat">
       <h1>Transactions</h1>
-      <div className="card-container">
-        {data.map((transaction) => (
-          <CardTransaction data={transaction} />
+      <div
+        className="card-container"
+        style={{ flexDirection: "column-reverse" }}
+      >
+        {transactions.map((transaction, i) => (
+          <CardTransaction key={i} data={transaction} />
         ))}
       </div>
     </div>
